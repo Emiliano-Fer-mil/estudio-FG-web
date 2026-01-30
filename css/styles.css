@@ -1,0 +1,302 @@
+/* styles.ccs */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables simples de diseño */
+:root {
+  --color-fondo: #f5f5f5;
+  --color-principal: #1f2933;
+  --color-acento: #2563eb;
+  --color-texto: #333;
+  --altura-navbar: 64px;
+}
+
+/* Estilos globales */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
+
+.nav-link.active {
+  color: var(--color-acento);
+  border-bottom: 2px solid var(--color-acento);
+  padding-bottom: 0.25rem;
+}
+
+/* =====================
+   TIPOGRAFÍA
+===================== */
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-principal);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-principal);
+}
+
+p {
+  max-width: 600px;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+
+header {
+  position: sticky;
+  top: 0;
+  height: var(--altura-navbar);
+  background: white;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.navbar {
+  height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo {
+  height: 40px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* MENU DESKTOP */
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--color-principal);
+  font-weight: 500;
+}
+
+.menu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* HAMBURGER */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 420px) {
+
+  .logo {
+    height: 32px;
+  }
+
+  h1 {
+  font-size: 1.6rem;
+}
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: var(--altura-navbar);
+    left: 0;
+    width: 100%;
+
+    background-color: white;
+
+    display: none;     
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+}
+
+/* =====================
+   CONTENIDO
+===================== */
+
+section {
+  scroll-margin-top: var(--altura-navbar);
+  padding: 6rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section:nth-child(even) {
+  background-color: #ffffff;
+}
+
+section:nth-child(odd) {
+  background-color: #eef2f7;
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111827;
+  color: white;
+}
+
+/* =====================
+   DATOS DE CONTACTO
+===================== */
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  text-decoration: none;   /* quita la línea */
+  color: var(--color-principal);
+  font-size: 1rem;
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+}
+
+.contact-item:hover {
+  color: var(--color-acento);
+}
+/* =====================
+   FORMULARIO DE CONTACTO
+===================== */
+
+.contact-form-intro {
+  text-align: center;
+  margin: 3rem auto 2rem;
+  max-width: 600px;
+}
+
+.contact-form-intro .divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-acento);
+  margin: 0 auto 1rem;
+}
+
+.contact-form-intro p {
+  font-size: 0.95rem;
+  color: var(--color-texto);
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 2rem auto 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-field label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-principal);
+}
+
+.form-field input,
+.form-field textarea {
+  font-family: inherit;
+  font-size: 1rem;
+
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  width: 100%;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--color-acento);
+}
+
+.btn-submit {
+  margin-top: 0.5rem;
+
+  align-self: flex-start;
+  padding: 0.6rem 1.5rem;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  background-color: var(--color-acento);
+  color: white;
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  opacity: 0.9;
+}
+
+.error-msg {
+  font-size: 0.8rem;
+  color: #b91c1c;
+  min-height: 1em;
+}
+
+.form-field.error input,
+.form-field.error textarea {
+  border-color: #b91c1c;
+}

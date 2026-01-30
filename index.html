@@ -1,0 +1,152 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Estudio de Abogadas FG</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon-96x96.png">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+
+    <!-- Fuente (opcional, después la definimos mejor) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="nav-left">
+                <img src="assets/img/logoEstudio_1.jpg" alt="Estudio de Abogadas FG" class="logo">
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#nosotras" class="nav-link">Nosotras</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+
+            <button class="menu-toggle" aria-label="Abrir menú">
+                ☰
+            </button>
+
+        </nav>
+    </header>
+
+    <!-- Secciones -->
+    <main>
+
+        <section id="inicio">
+            <h1>Estudio de Abogadas FG</h1>
+            <p>Bienvenido/a a mi sitio.</p>
+        </section>
+
+        <section id="nosotras">
+            <h2>Nosotras</h2>
+            <p>Acá va una breve descripción.</p>
+        </section>
+
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <p>Listado o descripción de servicios.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+
+            <div class="links">
+
+                <a href="https://wa.me/541135753475" class="contact-item" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+54 11 3575 3475 EMERGENCIAS</span>
+                </a>
+
+                <a href="https://wa.me/541132172685" class="contact-item" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+54 11 3217 2685 EMERGENCIAS</span>
+                </a>
+
+                <a href="https://www.instagram.com/estudiodeabogadas.fg" class="contact-item" target="_blank"
+                    rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                    <span>@estudiodeabogadas.fg</span>
+                </a>
+
+                <a href="https://www.linkedin.com/company/estudio-fg" class="contact-item" target="_blank"
+                    rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                    <span>Estudio FG</span>
+                </a>
+
+            </div>
+
+            <div class="contact-form-intro">
+                <div class="divider"></div>
+                <p>
+                    o envíanos tu consulta con este formulario, sin compromiso y te contactaremos a la brevedad.
+                </p>
+            </div>
+
+            <form 
+            class="contact-form" 
+            action="https://formspree.io/f/meekrvja" 
+            method="POST" 
+            novalidate>
+
+                <div class="form-field">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <small class="error-msg" data-error-for="nombre"></small>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                    <small class="error-msg" data-error-for="email"></small>
+                </div>
+
+                <div class="form-field">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
+                    <small class="error-msg" data-error-for="telefono"></small>
+                </div>
+
+                <div class="form-field">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                    <small class="error-msg" data-error-for="mensaje"></small>
+                </div>
+
+
+                <button type="submit" class="btn-submit">
+                    Enviar
+                </button>
+
+            </form>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 - Estudio de Abogadas FG</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
